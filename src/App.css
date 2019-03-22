@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  width:100%;
+
 }
 
 .App-logo {
@@ -17,6 +18,28 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.nav a{
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.nav a:first-child{
+  color:red;
+  font-size: 40px;
+  font-family: cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.nav  {
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display:flex;
+  justify-content: space-around;
+  max-width:100%;
+text-underline-position: none;
+list-style:none;
 }
 
 .App-link {
