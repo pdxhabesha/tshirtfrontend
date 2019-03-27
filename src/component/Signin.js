@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 class Signin extends Component {
     state = {
-        test: "react dom test input",
+        email: "",
         password: "",
 
     };
@@ -10,33 +10,29 @@ class Signin extends Component {
         e.preventDefault();
         console.log("onsubmit event listener just fired!! ", this.state);
 
-    }
+    };
     handleChange = (e) => {
         let name = e.target.name;
-        console.log("onChange event listener just fired ", name);
-
         this.setState({
             [name]: e.target.value
         })
-    }
+    };
 
     render() {
         return (
             <form className="signin" onSubmit={this.handleSubmit}>
                 <input
                     type="text"
-                    className="miriam"
-                    placeholder={this.state.test}
-                    id="test1"
-                    name="test"
-                    value={this.state.test}
+                    className="email"
+                    placeholder={"Email"}
+                    name="email"
+                    value={this.state.email}
                     onChange={this.handleChange}
                 />
 
                 <input
                     type="password"
-                    placeholder={"please enter password"}
-                    id="test2"
+                    placeholder={"Password"}
                     name="password"
                     value={this.state.password}
                     onChange={this.handleChange}
