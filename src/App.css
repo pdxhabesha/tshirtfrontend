@@ -2,6 +2,42 @@
   width:100%;
 
 }
+.miriam{
+  font-family: cursive;
+}
+.signin input {
+
+  display:block;
+  margin-top: 10px;
+}
+.signin{
+  width:300px;
+  margin:auto;
+}
+.signin input[type="text"],
+.signin input[type="password"]{
+  width: 100%;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px; */
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid grey;
+
+}
+.signin input[type="submit"]{
+  margin: auto;
+  margin-top: 20px;
+  /* padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; */
+  padding: 10px 80px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FD0470;
+  color: white;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
