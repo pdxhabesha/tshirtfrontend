@@ -23,7 +23,6 @@ handleSubmit= (e) =>{
   render() {
     return (
       <form className="signin" onSubmit={this.handleSubmit}>
-      // <>
           <input
             type="text"
             className="miriam"
@@ -47,9 +46,8 @@ handleSubmit= (e) =>{
 
           <input
           type="submit"
-          value="Submit"
+          value="SignIn"
           />
-          // </>
       </form>
     );
   }
