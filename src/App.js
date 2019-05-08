@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Nav from "./component/Nav.js";
 import Signin from "./component/Signin";
+import SingUp from "./component/SignUp";
 import { Route } from "react-router-dom";
 
 
@@ -16,7 +17,7 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState ( {headline: "Welcome to ShopMate"});
-    
+
     console.log("[app.js] componentDidMount")
   }
 
@@ -25,8 +26,8 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <h1> {this.state.headline} </h1>
-         <Route path="/signin/" component={Signin} />
+				<Route path="/signin" component={Signin} />
+         <Route path="/register" component={SingUp} />
 
       </div>
     );

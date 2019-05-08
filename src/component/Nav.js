@@ -20,6 +20,7 @@ class Nav extends Component {
         <Link to="/men/">Men</Link>
         <Link to="/kids/">Kids</Link>
         <Link to="/signin/">Sign in</Link>
+        <Link to="/register/">SignUp</Link>
       </nav>
     );
   }

@@ -31,6 +31,7 @@
     text-align: center;
 }
 .signin input[type="text"],
+.signin input[type="email"],
 .signin input[type="password"] {
     width: 100%;
     /* padding-top: 10px;
