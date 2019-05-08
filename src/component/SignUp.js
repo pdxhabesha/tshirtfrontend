@@ -4,6 +4,8 @@ class Signin extends Component {
   state = {
     username: "",
     password:"",
+    password2:"",
+    email: ""
 
   };
 handleSubmit= (e) =>{
@@ -26,10 +28,9 @@ handleSubmit= (e) =>{
 
           <input
             type="text"
-            className="miriam"
-            placeholder={this.state.test}
-            id="test1"
-            name="test"
+            className="username"
+            placeholder={"Username"}
+            name="username"
             value={this.state.test}
             onChange={this.handleChange }
           />
