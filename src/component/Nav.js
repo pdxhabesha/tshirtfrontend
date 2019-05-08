@@ -2,7 +2,16 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
+  componentWillMount() {
+    console.log("[Nav.js] componentWillMount")
+  }
+  componentDidMount() {
+    console.log("[Nav.js] componentDidMount")
+  }
   render() {
+
+    console.log("[Nav.js] render")
+
     return (
       <nav className="nav">
 

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 class Signin extends Component {
   state = {
-    test: "react dom test input",
+    test: "enter email or username",
     password:"",
 
   };
@@ -21,6 +21,7 @@ handleSubmit= (e) =>{
   }
 
   render() {
+    console.log(this.props)
     return (
       <form className="signin" onSubmit={this.handleSubmit}>
 
@@ -49,7 +50,7 @@ handleSubmit= (e) =>{
           type="submit"
           value="Submit"
           />
-        
+
       </form>
     );
   }
