@@ -1,0 +1,125 @@
+div[loading=true]{
+    background-color: rgba(220, 220, 220, 0.56);
+    z-index: 10000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.form{
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+.form input {
+    display: block;
+    font-size: 20px;
+    border: 1px solid #80808061;
+}
+.form input:focus {
+    outline: none;
+}
+
+.form input::placeholder{
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    width: 100%;
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; */
+    padding: 20px 10px 20px 20px;
+    border-radius: 10px;
+}
+
+.form input[type="submit"] {
+    margin: auto;
+    margin-top: 20px;
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px; */
+    padding: 25px 60px;
+    border-radius: 100px;
+    border: none;
+    background-color: #FD0470;
+    color: white;
+    cursor: pointer;
+}
+.form input[type="submit"]:disabled{
+    background-color: darkgray;
+    cursor: not-allowed;
+
+}
+.email {
+    font-family: cursive;
+}
+.input__group:not(:first-child){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.input__group  input[type="checkbox"]{
+    margin: 0 10px 0 0;
+}
+.strength-meter {
+    /* Reset the default appearance */
+    position: relative;
+    top: 8px;
+    height: 3px;
+    background: #ddd;
+    border-radius: 2px;
+    width: 100%;
+
+}
+.strength-meter:before,
+.strength-meter:after {
+    content: "";
+    height: inherit;
+    background: transparent;
+    display: block;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 6px 0;
+    position: absolute;
+    width: calc(20% + 6px);
+    z-index: 10;
+}
+.strength-meter:before {
+    left: calc(20% - 3px);
+}
+.strength-meter:after {
+    right: calc(20% - 3px);
+}
+.strength-meter-fill {
+    background: transparent;
+    height: inherit;
+    position: absolute;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.5s ease-in-out, background 0.25s;
+}
+.strength-meter-fill[value="0"] {
+    width: 20%;
+    background: darkred;
+}
+.strength-meter-fill[value="1"] {
+    width: 40%;
+    background: orangered;
+}
+.strength-meter-fill[value="2"] {
+    width: 60%;
+    background: orange;
+}
+.strength-meter-fill[value="3"] {
+    width: 80%;
+    background: yellowgreen;
+}
+.strength-meter-fill[value="4"] {
+    width: 100%;
+    background: green;
+}
