@@ -5,62 +5,20 @@
 }
 .App {
     width: 100%;
+    background-color: rgb(243, 243, 239);
+    min-height: 100vh;
 }
 
-.email {
-    font-family: cursive;
-}
-
-.signin input {
-    display: block;
-    margin-top: 10px;
-    font-size: 20px;
-}
-.signin input:focus {
-    border: none;
-    outline: none;
-}
-
-.signin {
-    width: 300px;
-    margin: auto;
-    background: rgb(243, 243, 239);
-    padding: 20px;
-}
-.signin input::placeholder{
-    text-align: center;
-}
-.signin input[type="text"],
-.signin input[type="email"],
-.signin input[type="password"] {
-    width: 100%;
-    /* padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px; */
-    padding: 10px 10px 10px 20px;
-    border-radius: 10px;
-    border: 1px solid grey;
-
-}
-
-.signin input[type="submit"] {
-    margin: auto;
-    margin-top: 20px;
-    /* padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px; */
-    padding: 10px 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: #FD0470;
-    color: white;
-    cursor: pointer;
-}
-
-.nav a {
+.nav a,
+.nav button{
     text-decoration: none;
     font-family: sans-serif;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 800;
 }
 
 .nav a:first-child {
@@ -78,4 +36,6 @@
     justify-content: space-around;
     max-width: 100%;
     list-style: none;
+    align-items: center;
+    color: #000;
 }
