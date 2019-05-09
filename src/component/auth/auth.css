@@ -1,0 +1,27 @@
+.auth{
+  width: 400px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  color: #ff0239;
+}
+.auth__header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  align-items: center;
+  padding: 20px;
+  background-color: #c2c2c21a;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.auth__footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.auth__footer a{
+  text-decoration: none;
+  color: inherit;
+}
