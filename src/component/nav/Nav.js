@@ -5,7 +5,7 @@ class Nav extends Component {
     render() {
         return (
             <nav className="nav">
-                <Link to="/">ShopMate</Link>
+                <Link to="/home">ShopMate</Link>
                 <Link to="/women/">Women</Link>
                 <Link to="/men/">Men</Link>
                 <Link to="/kids/">Kids</Link>
