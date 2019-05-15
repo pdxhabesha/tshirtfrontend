@@ -3,6 +3,7 @@ import "./App.css";
 import Nav from "./component/nav/Nav.js";
 import Auth from "./component/auth";
 import {Route} from "react-router-dom";
+import Products from "./component/products";
 
 
 
@@ -26,6 +27,7 @@ class App extends Component {
             <div className="App">
                 <Nav isLogedIn={this.state.isLogedIn} logOut={this.logOut}/>
                 <Route path={"/auth"} render={e => <Auth {...e} logIn={this.logIn}/>}/>
+                <Route path={"/home"} exact component={Products} />
             </div>
         );
     }
