@@ -1,11 +1,14 @@
 import React from "react";
-import { IoIosCart } from "react-icons/io";
+import {IoIosCart} from "react-icons/io";
 import {withRouter} from "react-router-dom";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Table } from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {CustomInput, FormGroup, Label} from 'reactstrap';
+
+import {Table} from 'reactstrap';
 
 import "./Cart.css"
-class Cart extends React.Component{
+
+class Cart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,11 +17,12 @@ class Cart extends React.Component{
 
         this.toggle = this.toggle.bind(this);
     }
-    checkOut = () =>{
+
+    checkOut = () => {
         this.setState(prevState => ({
             modal: !prevState.modal
         }));
-        this.props.history.push('/cart')
+        this.props.history.push('/checkout')
     };
 
     toggle() {
@@ -26,19 +30,15 @@ class Cart extends React.Component{
             modal: !prevState.modal
         }));
     }
+
     render() {
         // let {product_id, total_items, total_amount, added_on, cart_id} = this.props.data;
         let {total_items, products} = this.props.data;
-       return (
+        return (
             <div className="cart">
-                {/*<div>product_id:  {product_id.map(id => <span>{id},</span>)}</div>*/}
-                {/*<Link to="/cart">*/}
-                <IoIosCart  onClick={this.toggle}/>
-                {/*</Link>*/}
+
+                <IoIosCart onClick={this.toggle}/>
                 <p className="cart__floating">{total_items}</p>
-                {/*<p>{total_amount.toFixed(2)}</p>*/}
-                {/*<p>added_on: {added_on}</p>*/}
-                {/*<p>cart_id: {cart_id}</p>*/}
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
                     <ModalHeader toggle={this.toggle}>{total_items} items in your cart</ModalHeader>
                     <ModalBody>
@@ -53,10 +53,34 @@ class Cart extends React.Component{
                             </thead>
                             <tbody>
                             {products.map(product => (
-                                <tr>
-                                    <td>{product.name}</td>
-                                    <td>{product.size}</td>
-                                    <td>{product.quantity}</td>
+                                <tr key={product.product_id}>
+                                    <td>
+                                        <img width="100%" src={`${process.env.REACT_APP_API_URL}static/img/${product.thumbnail}`} alt="Card cap" />
+                                    </td>
+                                    <td>
+                                    <FormGroup>
+                                        <Label for="exampleCustomSelect">Size</Label>
+                                        <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
+                                            {product.attribute.map(atr => {
+                                                if(atr.attribute.name === "Size"){
+                                                    return <option key={atr.attribute_value_id.toString()}>{atr.value}</option>
+                                                }else{
+                                                    return null;
+                                                }
+                                            })}
+                                        </CustomInput>
+                                    </FormGroup>
+                                    </td>
+                                    <td>
+                                        <FormGroup>
+                                            <Label for="exampleCustomSelect">Quantity</Label>
+                                            <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
+                                                {[0,1,2,3,4,5,6].map(atr =>{
+                                                        return <option key={atr.toString()}>{atr}</option>
+                                                    })}
+                                            </CustomInput>
+                                        </FormGroup>
+                                    </td>
                                     <td>{product.price}</td>
                                 </tr>
                             ))}
@@ -72,4 +96,5 @@ class Cart extends React.Component{
         );
     }
 }
-export  default withRouter(Cart);
+
+export default withRouter(Cart);
