@@ -4,6 +4,7 @@ import Nav from "./component/nav/Nav.js";
 import Auth from "./component/auth";
 import {Route} from "react-router-dom";
 import Products from "./component/products";
+import Checkout from "./component/strip/Checkout";
 
 class App extends Component {
 
@@ -41,6 +42,7 @@ class App extends Component {
                 <Nav isLogedIn={this.state.isLogedIn} logOut={this.logOut} data={this.state}/>
                 <Route path={"/auth"} render={e => <Auth {...e} logIn={this.logIn}/>}/>
                 <Route path={"/home"} exact render={e => <Products {...e} addItem={this.addItem} />} />
+                <Route path={"/checkout"} exact render={e => <Checkout {...e}  />} />
             </div>
         );
     }
