@@ -23,9 +23,10 @@ export default class  extends Component {
     render() {
         return (
             <Nav tabs>
-                <Dropdown pills isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle nav caret>
-                        <Link to="/home" className="logo">ShopMate</Link>
+                <Dropdown pills="true" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <DropdownToggle nav caret to="/home" className="logo" >
+                        {/*<Link to="/home" className="logo">ShopMate</Link>*/}
+                        ShopMate
                     </DropdownToggle>
                     <DropdownMenu>
                         {!this.props.isLogedIn && <DropdownItem> <Link to="/auth/login/">Sign in</Link> </DropdownItem>}
