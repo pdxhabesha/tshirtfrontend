@@ -10,6 +10,7 @@
     "react-icons": "^3.6.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "react-stripe-elements": "^3.0.0",
     "reactstrap": "^8.0.0",
     "zxcvbn": "^4.4.2"
   },

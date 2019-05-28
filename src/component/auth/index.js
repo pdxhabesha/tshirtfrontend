@@ -1,14 +1,13 @@
 import React, {Component} from "react";
 import SignIn from "./SignIn";
 import SignUP from "./SignUp";
-import {Link, Redirect, Route} from "react-router-dom";
+import {Link, Route} from "react-router-dom";
 import {FaArrowLeft, FaBars} from "react-icons/fa";
 import "./auth.css"
 class Auth extends Component {
 
     render() {
-        // if (localStorage.getItem("token"))
-        //     return <Redirect to={"/home"}/>;
+
         return (
             <div className="auth">
                 <div className="auth__header">

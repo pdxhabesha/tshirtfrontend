@@ -1,0 +1,60 @@
+.nav a,
+.nav button{
+    text-decoration: none;
+    font-family: sans-serif;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.nav .logo{
+    color: red;
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    list-style: none;
+    align-items: center;
+    color: #000;
+}
+.nav svg{
+    font-size: 25px;
+}
+.search{
+    width: 150px;
+    position: relative;
+}
+.search svg{
+    position: absolute;
+    left: 1px;
+    top: 10%;
+}
+.search__input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    width: 60%;
+    transition: all .4s;
+    cursor: pointer;
+    padding: 3px 0 3px 30px;
+    /*border-radius: 100px;*/
+}
+.search__input:focus,
+.search__input:active {
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid orangered;
+    width: 100%;
+    outline: none;
+}

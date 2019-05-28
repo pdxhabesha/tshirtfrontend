@@ -8,34 +8,3 @@
     background-color: rgb(243, 243, 239);
     min-height: 100vh;
 }
-
-.nav a,
-.nav button{
-    text-decoration: none;
-    font-family: sans-serif;
-    border: none;
-    background-color: inherit;
-    font-size: inherit;
-    color: inherit;
-    cursor: pointer;
-    font-weight: 800;
-}
-
-.nav a:first-child {
-    color: red;
-    font-size: 40px;
-    font-family: cursive;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.nav {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
-    max-width: 100%;
-    list-style: none;
-    align-items: center;
-    color: #000;
-}
