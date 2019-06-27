@@ -6,15 +6,15 @@ import "./Nav.css"
 
 class Products extends React.Component{
     state={
-        products:[]
+        products: []
     };
     componentDidMount() {
         axios.get('/api/products')
             .then(result => {
                 this.setState({products: result.data.results});
-        }).catch(error => {
-            console.log({error});
-        })
+            }).catch(error => {
+                console.log({error});
+            })
     }
 
     render() {
