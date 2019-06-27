@@ -33,7 +33,7 @@ class Cart extends React.Component {
 
     render() {
         // let {product_id, total_items, total_amount, added_on, cart_id} = this.props.data;
-        let {total_items, products} = this.props.data;
+        let {total_items, cart_products} = this.props.data;
         return (
             <div className="cart">
 
@@ -52,7 +52,7 @@ class Cart extends React.Component {
                             </tr>
                             </thead>
                             <tbody>
-                            {products.map(product => (
+                            {cart_products.map(product => (
                                 <tr key={product.product_id}>
                                     <td>
                                         <img width="100%" src={`${process.env.REACT_APP_API_URL}static/img/${product.thumbnail}`} alt="Card cap" />
